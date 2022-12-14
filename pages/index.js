@@ -27,7 +27,7 @@ export default function Home({ books }) {
       style={{backgroundImage:`url("https://i.pinimg.com/originals/ed/e1/d6/ede1d669ed75699be57f39d14bb4306b.jpg")`}}>
         
           <div className="p-8 font-bold text-2xl md:text-4xl">
-            Share Images and connect with people
+          Today a reader, tomorrow a leader
           </div>
       </div>
       
@@ -54,6 +54,6 @@ export async function getStaticProps() {
       props: {
       books: data,
       },
-      revalidate: 3600
+      revalidate: 360
   }
 }
