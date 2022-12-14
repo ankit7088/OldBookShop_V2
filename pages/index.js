@@ -26,7 +26,7 @@ export default function Home({ books }) {
         <div className="bg-fixed bg-center bg-no-repeat bg-cover h-96 flex justify-center items-center"
       style={{backgroundImage:`url("https://i.pinimg.com/originals/ed/e1/d6/ede1d669ed75699be57f39d14bb4306b.jpg")`}}>
         
-          <div className="p-8 font-bold text-2xl md:text-4xl">
+          <div className="p-8 font-bold text-2xl md:text-4xl ">
           Today a reader, tomorrow a leader
           </div>
       </div>

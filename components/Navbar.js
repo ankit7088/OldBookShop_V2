@@ -146,7 +146,7 @@ const openHelpDesk = ()=>{
           <form className="flex flex-1 relative md:mx-12 lg:mx-[20vw]" onSubmit={submitSearch}>
             <input ref={searchInputRef}
               type="text"
-              placeholder="search for images"
+              placeholder="search for books"
               className="input input-bordered w-full" />
             <button className="bg-base-100 my-1 mr-1 absolute right-0 p-2 rounded-lg">
           <AiOutlineSearch className="h-6 w-6"/>
