@@ -187,7 +187,7 @@ const openHelpDesk = ()=>{
 </svg>
           </Link>}
           {
-            !session && <Link href="/authentication">
+            !session && <Link href="/login">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-12 w-8 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M12 4v16m8-8H4" />
 </svg>
@@ -200,7 +200,7 @@ const openHelpDesk = ()=>{
             <h1 className="text-3xl font-bold cursor-pointer">H</h1>
             </div>}
           {
-            !session && <Link href="/authentication">
+            !session && <Link href="/login">
             <div>
               <h1 className="text-3xl font-bold cursor-pointer">H</h1>
               </div>

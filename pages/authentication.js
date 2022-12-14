@@ -224,7 +224,7 @@ const Auth = () => {
 
                                 <div className="mt-6 text-md text-center text-gray-400">Already have an account?
                                     <Link href='/login'>
-                                        <h1 className="text-sky-400">Login</h1>
+                                        <h1 className="text-sky-400 cursor-pointer">Login</h1>
                                     </Link></div>
                     </div>
                 </div>
