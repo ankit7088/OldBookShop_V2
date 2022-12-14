@@ -9,9 +9,9 @@ import Comment from './Comment';
 import LoginModal from './LoginModal';
 import LikePin from './LikePin';
 import { useScrollLock } from '@mantine/hooks';
-import { FiHeart } from 'react-icons/Fi';
-import { BsShare } from 'react-icons/Bs';
-import { FaRupeeSign } from 'react-icons/Fa';
+import { FiHeart } from 'react-icons/fi';
+import { BsShare } from 'react-icons/bs';
+import { FaRupeeSign } from 'react-icons/fa';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
