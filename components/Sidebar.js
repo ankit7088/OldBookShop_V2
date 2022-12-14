@@ -44,14 +44,14 @@ const Sidebar = ({ userId,sideBar, setSideBar }) => {
                 setSideBar(false);
         }}
         >
-          <Image
+          <img
             src={branch.image}
             alt={branch.name}
             height={40}
             width={40}
-            className="rounded-full object-cover"
+            className="rounded-full h-10 w-12 object-cover"
             />
-          <h1>{branch.name}</h1>
+          <h1 className=' w-full'>{branch.name}</h1>
       </div>)}
             </motion.div>  
             </div>}

@@ -4,13 +4,16 @@ import { useRouter } from "next/router";
 import toast, { Toaster } from 'react-hot-toast';
 import Link from "next/link";
 import { FcGoogle } from 'react-icons/fc';
+import { bloodGroups } from "../lib/Data";
 
 const Auth = () => {
     const userNameRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
     const confirmPasswordRef = useRef();
+    const phoneRef = useRef();
     const [loading, setLoading] = useState(false);
+    const [bloodType, setBloodType] = useState('');
     
     const router = useRouter();
  
@@ -24,6 +27,9 @@ const Auth = () => {
 
         const confirmedPassword = confirmPasswordRef.current.value;
         const enteredUserName = userNameRef.current.value;
+        const enteredPhoneNumber = phoneRef.current.value;
+        const enteredBlood = bloodType;
+        
 
        
         if (enteredPassword !== confirmedPassword)
@@ -55,6 +61,8 @@ const Auth = () => {
             email: enteredEmail,
             password: enteredPassword,
             userName:enteredUserName,
+            phone:enteredPhoneNumber,
+            bloodGroup:enteredBlood,
         }),
         headers: {
             'Content-Type': 'application/json',
@@ -130,22 +138,21 @@ const Auth = () => {
     return (
         <>
             <Toaster />
-            <div className="bg-white dark:bg-gray-900">
-        <div className="flex justify-center h-screen">
+        <div className="flex h-[91vh] overflow-hidden w-full">
                     <div className="hidden bg-cover lg:block lg:w-2/3" style={{ backgroundImage: `url(https://images.unsplash.com/photo-1616763355603-9755a640a287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)` }}>
                 <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
                     <div>
-                        <h2 className="text-4xl font-bold text-white">ImageDash</h2>
+                        <h2 className="text-4xl font-bold text-white">OldBookShop</h2>
                         
-                        <p className="max-w-xl mt-3 text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In autem ipsa, nulla laboriosam dolores, repellendus perferendis libero suscipit nam temporibus molestiae</p>
+                        <p className="max-w-xl mt-3 text-gray-300">The rewards for biotechnology are tremendous -to solve disease, eliminate poverty, age gracefully. It sounds so much cooler than Facebook.</p>
                     </div>
                 </div>
             </div>
             
-            <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
+            <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6 overflow-scroll pt-96 md:pt-72 pb-12">
                 <div className="flex-1">
                     <div className="text-center">
-                        <h2 className="text-4xl font-bold text-center text-gray-700 dark:text-white">ImageDash</h2>
+                        <h2 className="text-4xl font-bold text-center text-gray-700 dark:text-white">OldBookShop</h2>
                         
                         <p className="mt-3 text-gray-500 dark:text-gray-300">Sign in to access your account</p>
                     </div>
@@ -155,6 +162,30 @@ const Auth = () => {
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email Address</label>
                                 <input ref={emailRef} type="email" name="email" id="email" placeholder="example@example.com" className="input w-full input-bordered"/>
+                            </div>
+
+                            <div className="mt-4">
+                                <label htmlFor="phone" className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Phone </label>
+                                <input ref={phoneRef} type="text" name="phone" id="phone" placeholder="enter phone no." className="input w-full input-bordered"/>
+                            </div>
+                            <div className="mt-4">
+                            <p className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Select Blood Group</p>
+                            <select
+                                onChange={(e) => {
+                                setBloodType(e.target.value);
+                                }}
+                                className="outline-none p-2 bg-stone-700 rounded-md cursor-pointer"
+                            >
+                                <option value="others" className="sm:text-bg bg-stone-700">Select Blood Type</option>
+                                {bloodGroups.map((bloodG) => (
+                                <option
+                                    className=" border-0 text-white outline-none capitalize bg-stone-900"
+                                    key={bloodG.blood}
+                                    value={`${bloodG.blood}`}>
+                                    {bloodG.blood}
+                                </option>
+                                ))}
+                            </select>
                             </div>
 
                             <div className="mt-4">
@@ -199,7 +230,6 @@ const Auth = () => {
                 </div>
             </div>
         </div>
-    </div>
      </>
   );
 };

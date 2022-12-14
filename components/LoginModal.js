@@ -70,7 +70,7 @@ const LoginModal = ({loginMessage,compType,setShowLoginModal,loginImage}) => {
 
     <div className="w-full px-4 py-8 md:px-8 lg:w-1/2">
       <h2 className="text-2xl font-semibold text-center text-gray-700 dark:text-white">
-        ImageDash
+        OldBookShop
       </h2>
 
       <p className="text-center py-2">

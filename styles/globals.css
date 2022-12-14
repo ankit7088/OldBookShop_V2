@@ -20,8 +20,8 @@ a {
 }
 
 ::-webkit-scrollbar{
-  width: 8px;
-  height: 5px;
+  width: 1px;
+  height: 1px;
 }
 
 ::-webkit-scrollbar-track{

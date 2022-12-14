@@ -8,7 +8,7 @@ async function handler(req, res) {
 
   const data = req.body;
 
-  const { email, password, userName } = data;
+  const { email, password, userName,phone,bloodGroup } = data;
 
   if (
     !email ||
@@ -47,6 +47,8 @@ async function handler(req, res) {
         _type: 'user',
         userName: userName,
         email: email,
+        phone,
+        bloodGroup,
         password: hashedPassword,
         image:'https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-man-default-avatar-png-image_2813122.jpg'
       };

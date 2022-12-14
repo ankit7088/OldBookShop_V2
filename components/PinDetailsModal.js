@@ -127,25 +127,25 @@ const PinDetailsModal = (props) => {
       {pinDetail && ( <section className='flex flex-col lg:flex-row pt-12 px-12 gap-6 '>
         <div className='lg:w-3/5 '>
         <img
-              className="w-full max-h-[80vh] object-cover"
+              className="w-full max-h-[80vh] object-contain"
               src={(pinDetail?.image && urlFor(pinDetail?.image).url())}
               alt="user-post"
               />
         </div>
-        <aside className='lg:w-2/5 bg-[#222222b1]'>
-          <div className="w-full border-2 rounded border-gray-300 p-4">
+        <aside className='lg:w-2/5 '>
+          <div className="w-full border-2 rounded border-gray-300 p-4 bg-[#222222b1]">
             <div className=" py-2">
-              <h1 className="text-xl md:text-3xl lg:text-4xl  font-semibold ">Real Story of Love</h1>
+              <h1 className="text-xl md:text-3xl lg:text-4xl  font-semibold ">{pinDetail?.title}</h1>
               <a className="inline-flex items-center mt-4">
               <img alt="blog" src="https://dummyimage.com/103x103" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
               <span className="flex-grow flex flex-col pl-2">
-                <span className="title-font font-medium text-base md:text-lg">Alper Kamu</span>
+                <span className="title-font font-medium text-base md:text-lg">{moreDetails?.author}</span>
               </span>
             </a>
             </div>
             <div className="flex items-center flex-wrap py-2 justify-between">
               <div className="text-xl md:text-2xl inline-flex items-center md:mb-2 lg:mb-0">
-                <FaRupeeSign/><span className="inline-flex">178</span>
+                <FaRupeeSign/><span className="inline-flex">{moreDetails?.price}</span>
               </div>
               <div>
               <span className=" mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-lg md:text-xl pr-3 py-1 ">
@@ -157,10 +157,10 @@ const PinDetailsModal = (props) => {
               </div>
             </div>
           </div>
-          <div className="w-full border-2 rounded border-gray-300 p-4 my-3 md:my-6">
-            <h1 className="text-xl md:text-2xl  font-medium">Description Of Book:</h1>
+          <div className="w-full border-2 rounded border-gray-300 p-4 my-3 md:my-6 bg-[#222222b1]">
+            <h1 className="text-xl md:text-2xl  font-medium">Description </h1>
             <div className='border-b-2 my-2'></div>
-            <p className=" font-normal">Wiley Acing GATE Mechanical Engineering Book This is New Book 2018 Edition. <br /> No Pen and Pencil Marks <br /> Urgent Sale</p>
+            <p className=" font-normal">{moreDetails?.description}</p>
           </div>
           {/* <div className="w-full p-2 my-8 flex justify-center">
           <button className="btn btn-active btn-primary mr-4">Add to Cart</button>

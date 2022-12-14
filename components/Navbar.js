@@ -141,7 +141,7 @@ const openHelpDesk = ()=>{
           </button>
          
         <span className="px-1 md:px-2 text-xl md:text-3xl">
-            <Link href="/">IDash</Link>
+            <Link href="/">OBooks</Link>
           </span>
           <form className="flex flex-1 relative md:mx-12 lg:mx-[20vw]" onSubmit={submitSearch}>
             <input ref={searchInputRef}
@@ -180,7 +180,7 @@ const openHelpDesk = ()=>{
               <Link href="/login">Login</Link></button>
           }
         </div>
-        <div className="fixed rounded-full hover:animate-pulse bg-blue-100 text-gray-900 bottom-0 right-0 w-12 md:w-16 h-12 md:h-16 z-10 flex justify-center items-center m-8">
+        <div className="fixed rounded-full hover:animate-pulse cursor-pointer bg-blue-100 text-gray-900 bottom-0 right-0 w-12 md:w-16 h-12 md:h-16 z-10 flex justify-center items-center m-8">
           {session && <Link href="/createPin">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-12 w-8 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M12 4v16m8-8H4" />
@@ -197,12 +197,14 @@ const openHelpDesk = ()=>{
 
         <div className="fixed rounded-full hover:animate-pulse bg-blue-100 text-gray-900 bottom-0 left-0 w-12 md:w-16 h-12 md:h-16 z-10 flex justify-center items-center m-8">
           {session && <div onClick={openHelpDesk}>
-            <h1 className="text-3xl font-bold">H</h1>
+            <h1 className="text-3xl font-bold cursor-pointer">H</h1>
             </div>}
           {
-            !session && <div>
-              <h1 className="text-3xl font-bold">H</h1>
+            !session && <Link href="/authentication">
+            <div>
+              <h1 className="text-3xl font-bold cursor-pointer">H</h1>
               </div>
+            </Link>
           }
         </div>
 
