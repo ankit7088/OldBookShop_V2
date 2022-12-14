@@ -85,8 +85,8 @@ const HelpDeskModal = (props) => {
                 {bloodGroups.map((bloodG) => (
                   <option
                     className=" border-0 text-white outline-none capitalize bg-stone-900"
-                    key={bloodG.blood}
-                    value={`${bloodG.blood}`}>
+                    key={bloodG.bloodValue}
+                    value={`${bloodG.bloodValue}`}>
                     {bloodG.blood}
                   </option>
                 ))}
