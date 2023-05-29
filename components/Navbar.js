@@ -141,7 +141,7 @@ const openHelpDesk = ()=>{
           </button>
          
         <span className="px-1 md:px-2 text-xl md:text-3xl">
-            <Link href="/">OBooks</Link>
+            <Link href="/">BioBook</Link>
           </span>
           <form className="flex flex-1 relative md:mx-12 lg:mx-[20vw]" onSubmit={submitSearch}>
             <input ref={searchInputRef}
